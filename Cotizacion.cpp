@@ -1,25 +1,5 @@
-/*  Alex Jordan Perez Rojas    Codigo:20172578109
-Programa "Cotizacion":
-El siguiente programa emula las funcion de una cotizacion de una tienda
-de tecnologia donde se compran los computadores por partes y asi mismo
-armarlos al gusto y presupuesto del cliente. Este programa genera 3
-cotizaciones (archivos) que el cliente puede hacer:
-1-Bajo Costo: Es la combinacion de partes mas barata para el comprador.
-2-Alto Costo: Es la combinacion de las partes que desee el comprador asi no 
-			  sea barato.
-3-Portatil: Un computador portatil no se vende por partes, asi que es la 
-			de un portatil mas sus perifericos.
-Este programa contiene 4 clases 3 abstractas y 1 derivada, las cuales 
-realizan herencia por tres niveles, estas clases son:
--ABUELO: class tipo.
--PADRES: class torre,  class perifericos.
--HIJO:   class computador.
-la clase tipo inicializa la varible que decide el tipo de computador, las 
-clases torre y perifericos contienen las variables y funciones que dan y
-guardan las opciones de los distintos elemntos del computador, y la clase
-computador es la primera que se ejecuta, se encarga de hacer los calculos
-y de imprimir las cotizaciones (archivos).
-*/
+//  Alex Jordan Perez Rojas
+
 #include <iostream>
 #include <stdlib.h>
 #include <fstream>
@@ -114,7 +94,7 @@ void torre::portatiles(){  //Funcion para comprar portatil
 void torre :: proce(){   //Funcion para comprar procesador
 	preciopro = 0;
 	do{
-		cout<<"\tAñadir Procesador\t"<<endl;
+		cout<<"\tAÃ±adir Procesador\t"<<endl;
 	    cout<<" Digite el procesador segun el numero\n";
 	    cout<<"1. Intel G4560 3.5 G | 270.000"<<endl;
 	    cout<<"2. Intel Core I3 7100 3.9 GHZ | 360.000"<<endl;
@@ -198,7 +178,7 @@ void torre :: memram(){ //Funcion para comprar memoria ram
 void torre :: disco(){ //Funcion para disco duro
 	preciohdd=0;
 	do{
-		cout<<"\t Añadir Disco Duro\t"<<endl;
+		cout<<"\t AÃ±adir Disco Duro\t"<<endl;
 	    cout<<"Digite el disco duro segun el numero\n";
         cout<<"1. 1 TB 7200 RPM 64B TOSHIBA | 155.000"<<endl;
 	    cout<<"2. 2 TB 7200 RPM TOSHIBA | 200.000"<<endl;
@@ -232,7 +212,7 @@ void torre :: disco(){ //Funcion para disco duro
 void torre :: tarjetama(){  //Funcion para comprar tarjeta madre
 	precioboard=0;
 	do{
-		cout<<"\tAñadir tarjetama Madre\t"<<endl;
+		cout<<"\tAÃ±adir tarjetama Madre\t"<<endl;
 	    cout<<"Digite la tarjetama madre  segun el numero\n";
 	    cout<<"1. GIGABYTE H110M MH  | 198.000"<<endl;
 	    cout<<"2. MSI H370 GAMING PRO CARBON 8 GEN  | 465.000"<<endl;
@@ -297,7 +277,7 @@ class perifericos:public tipo{
 void perifericos :: monitor(){ //Funcion para comprar monitor
 	preciopant=0;
 	do{
-		cout<<"\tAñadir Monitor\t"<<endl;
+		cout<<"\tAÃ±adir Monitor\t"<<endl;
         cout<<"Digite el monitor segun el numero\n";
 	    cout<<"1. LG 20 1440X900 HDMI VGA IPS | 295.000"<<endl;
 	    cout<<"2. SAMUSNG 22 PLS 1920X1080 HDMI | 390.000"<<endl;
@@ -336,9 +316,9 @@ void perifericos :: monitor(){ //Funcion para comprar monitor
 void perifericos::impresoras(){ //Funcion para comprar impresora
 	precioimpre=0;
 	do{
-		cout<<"\tAñadir Impresora\t"<<endl;
+		cout<<"\tAÃ±adir Impresora\t"<<endl;
         cout<<"Digite la impresora segun el numero\n";
-	    cout<<"1. Hp Multifunciónal Gt 5810 | 338.000"<<endl;
+	    cout<<"1. Hp MultifunciÃ³nal Gt 5810 | 338.000"<<endl;
 	    cout<<"2. Epson L380 Sistema Ecotank | 399.000"<<endl;
 	    cout<<"3. Multifuncional Epson L380 | 421.000"<<endl;
 		cout<<"4. Epson Cargacontinua Multifuncional L396 Wifi | 550.000"<<endl;
@@ -346,7 +326,7 @@ void perifericos::impresoras(){ //Funcion para comprar impresora
 		switch(impresora){
 			case 1:
 				precioimpre=338000;
-				strcpy(impre, "Hp Multifunciónal Gt 5810");
+				strcpy(impre, "Hp MultifunciÃ³nal Gt 5810");
 				strcpy(marimpre,"Hp");				
 				system("cls");
 				break;
@@ -375,10 +355,10 @@ void perifericos::impresoras(){ //Funcion para comprar impresora
 void perifericos::parlantes(){  //Funcion para comprar parlantes
 	precioparla=0;
 	do{
-		cout<<"\tAñadir Parlantes\t"<<endl;
+		cout<<"\tAÃ±adir Parlantes\t"<<endl;
         cout<<"Digite los parlantes segun el numero\n";
 	    cout<<"1. Parlantes Genius Sp-U120 | 27.900"<<endl;
-	    cout<<"2. Compacto Estéreo M-11 | 32.900"<<endl;
+	    cout<<"2. Compacto EstÃ©reo M-11 | 32.900"<<endl;
 	    cout<<"3. LOGITECH Z313 2.1 50W 25RMS | 84.000"<<endl;
 		cin>>parlante;
 		switch(parlante){
@@ -389,7 +369,7 @@ void perifericos::parlantes(){  //Funcion para comprar parlantes
 				system("cls");
 				break;
 			case 2:
-				strcpy(par, "Compacto Estéreo M-11");
+				strcpy(par, "Compacto EstÃ©reo M-11");
 				strcpy(marpar,"Esterio");
 				precioparla=32900;				
 				system("cls");
